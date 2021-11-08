@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import Header from "./components/Header";
 import Menu from "./components/Menu";
+import Cart from "./components/Cart";
 
 const App = () => {
   const [data, setData] = useState();
@@ -25,26 +26,35 @@ const App = () => {
     fetchData();
   }, []);
 
-
-
   return isLoading ? (
     <span>En cours de chargement..."</span>
   ) : (
-    <>
-      <Header name= {data.restaurant.name} picture = {data.restaurant.picture} description = {data.restaurant.description}/>
-      
-      {data.categories.map((category, index)=>{
-        return(<Menu items = {{
-          mealType: category.name,
-          meals: category.meals        }} />)
-     
-        
+    <div className="App">
+      <Header
+        name={data.restaurant.name}
+        picture={data.restaurant.picture}
+        description={data.restaurant.description}
+      />
+      <div className="main-content container">
+        <div className="menu-container">
+          {data.categories.map((category, index) => {
+            console.log(category.meals);
+            return (
+              category.meals.length > 0 && (
+                <Menu
+                  items={{
+                    mealType: category.name,
+                    meals: category.meals,
+                  }}
+                />
+              )
+            );
+          })}
+        </div>
 
-      }
-  )
+        <Cart />
+      </div>
+    </div>
+  );
 };
-</>
-  )
-
-}
 export default App;
