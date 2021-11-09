@@ -1,4 +1,7 @@
+
+
 const Meals = (props) => {
+
   return (
     <div
       className="menu-item"
@@ -6,16 +9,24 @@ const Meals = (props) => {
         const newPanier = [...props.panier];
 
         const checkId = (obj) => obj.id === props.id;
-
+        const price = parseFloat(props.price)
+        console.log(typeof(price))
         if (newPanier.some(checkId) === false) {
+  
           newPanier.push({
             title: props.title,
-            price: props.price,
+            price: price,
             id: props.id,
             quantity: 1,
           });
         }
         props.setPanier(newPanier);
+
+        props.setTotal(props.total + price)
+
+
+
+  
         console.log(newPanier);
       }}
     >

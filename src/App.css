@@ -31,7 +31,8 @@ h3 {
 
 h1,
 h2,
-h3 {
+h3,
+span {
     color: #2E3333
 }
 
@@ -39,6 +40,7 @@ p {
     font-size: 14px;
     line-height: 20.8px;
 }
+
 
 button {
     background-color: inherit;
@@ -234,8 +236,81 @@ button {
     color: #8b9a9b;
 }
 
+.cart-validate {
+    background: #00cdbd;
+    color: #fff;
+    cursor: inherit;
+}
+
 .cart-empty {
     color: #868a8a;
     text-align: center;
     padding: 48px 0;
+}
+
+/* BasketItems */
+
+.cart-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-items {
+    border-bottom: 1px solid #d1d7d7;
+    margin: 0 10px;
+    max-height: calc(100vh - 300px);
+}
+
+.cart-line {
+    display: flex;
+    align-items: center;
+    color: #808484;
+    padding: 10px 0 10px
+}
+
+.cart-counter {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    color: #808484;
+}
+
+.Cart-amount {
+    width: 85px;
+    text-align: right;
+}
+
+.cart-item-name {
+    flex: 1 1
+}
+
+/* Results */
+.results {
+    margin: 0 10px;
+    padding: 10px 0;
+    border-bottom: 1px solid #d1d7d7;
+}
+
+.result-line {
+    display: flex;
+    align-items: center;
+    padding: .5rem 0;
+}
+
+.result-name {
+    flex: 1 1
+}
+
+.result-amount {
+    width: 85px;
+    text-align: right;
+}
+
+.result-total{
+    display: flex;
+    align-items: flex-start;
+    padding: 1.3rem 0;
+    margin: 0 10px;
+    font-weight: 600;
+    font-size: 1.2rem;
 }

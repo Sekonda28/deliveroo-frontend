@@ -9,7 +9,8 @@ import Cart from "./components/Cart";
 const App = () => {
   const [data, setData] = useState();
   const [isLoading, setIsLoading] = useState(true);
-  const [panier, setPanier] = useState([{ title: "testing", price: 20 }]);
+  const [panier, setPanier] = useState([]);
+  const [total, setTotal] = useState(0.00)
 
   useEffect(() => {
     const fetchData = async () => {
@@ -48,13 +49,20 @@ const App = () => {
                   }}
                   panier={panier}
                   setPanier={setPanier}
+                  total = {total}
+                  setTotal = {setTotal}
                   key={index}
                 />
               )
             );
           })}
         </div>
-        <Cart panier={panier} setPanier={setPanier} />
+        <Cart
+          panier={panier}
+          setPanier={setPanier}
+          total = {total}
+          setTotal = {setTotal}
+        />
       </div>
     </div>
   );

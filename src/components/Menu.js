@@ -1,6 +1,6 @@
 import Meals from "./Meals";
 
-const Menu = ({ items, panier, setPanier }) => {
+const Menu = ({ items, panier, setPanier, total, setTotal }) => {
 
   return (
     <div className="menu-container">
@@ -19,6 +19,9 @@ const Menu = ({ items, panier, setPanier }) => {
                 popular={info.popular}
                 panier = {panier}
                 setPanier= {setPanier}
+                total = {total}
+                setTotal = {setTotal}
+            
               />
             );
           })}
