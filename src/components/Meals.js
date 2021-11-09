@@ -1,6 +1,24 @@
 const Meals = (props) => {
   return (
-    <div className="menu-item">
+    <div
+      className="menu-item"
+      onClick={() => {
+        const newPanier = [...props.panier];
+
+        const checkId = (obj) => obj.id === props.id;
+
+        if (newPanier.some(checkId) === false) {
+          newPanier.push({
+            title: props.title,
+            price: props.price,
+            id: props.id,
+            quantity: 1,
+          });
+        }
+        props.setPanier(newPanier);
+        console.log(newPanier);
+      }}
+    >
       <div className="menu-card">
         <div className="menu-text">
           <h3>{props.title}</h3>

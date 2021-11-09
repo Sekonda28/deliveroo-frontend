@@ -9,6 +9,7 @@ import Cart from "./components/Cart";
 const App = () => {
   const [data, setData] = useState();
   const [isLoading, setIsLoading] = useState(true);
+  const [panier, setPanier] = useState([{ title: "testing", price: 20 }]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -16,7 +17,6 @@ const App = () => {
         const response = await axios.get(
           "https://deliveroo-backend-matt.herokuapp.com/"
         );
-        // console.log(response.data);
         setData(response.data);
         setIsLoading(false);
       } catch (error) {
@@ -35,10 +35,10 @@ const App = () => {
         picture={data.restaurant.picture}
         description={data.restaurant.description}
       />
+
       <div className="main-content container">
         <div className="menu-container">
           {data.categories.map((category, index) => {
-            console.log(category.meals);
             return (
               category.meals.length > 0 && (
                 <Menu
@@ -46,13 +46,15 @@ const App = () => {
                     mealType: category.name,
                     meals: category.meals,
                   }}
+                  panier={panier}
+                  setPanier={setPanier}
+                  key={index}
                 />
               )
             );
           })}
         </div>
-
-        <Cart />
+        <Cart panier={panier} setPanier={setPanier} />
       </div>
     </div>
   );
