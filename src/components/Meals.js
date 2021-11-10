@@ -18,11 +18,11 @@ const Meals = (props) => {
             price: price,
             id: props.id,
             quantity: 1,
-          });
-        }
-        props.setPanier(newPanier);
+          });  props.setPanier(newPanier);
 
-        props.setTotal(props.total + price)
+        props.setTotal(props.total + (price))
+        }
+      
 
 
 

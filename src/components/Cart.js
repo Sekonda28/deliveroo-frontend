@@ -1,7 +1,6 @@
 import BasketItems from "./BasketItems";
 
 const Cart = ({ panier, setPanier, total, setTotal }) => {
-  console.log(typeof(total));
   return (
     <div className="cart">
       <div className="cart-card">
@@ -22,11 +21,14 @@ const Cart = ({ panier, setPanier, total, setTotal }) => {
               return (
                 <BasketItems
                   key={index}
+                  index = {index}
                   title={order.title}
-                  price={order.price}
+                  price={order.price * order.quantity}
                   quantity={order.quantity}
                   total={total}
                   setTotal={setTotal}
+                  panier={panier}
+                  setPanier= {setPanier}
                 />
               );
             })}

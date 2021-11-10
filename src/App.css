@@ -284,6 +284,19 @@ button {
     flex: 1 1
 }
 
+.counter-button{
+    min-width: 1rem;
+    text-align: center;
+}
+.counter-button .fa-plus, .counter-button .fa-minus {
+    width: 20px;
+    height: 20px;
+    color: rgb(0, 206, 189);
+    cursor: pointer;
+    border-radius: 50%;
+    border: solid 1px rgb(0, 206, 189);
+}
+
 /* Results */
 .results {
     margin: 0 10px;
