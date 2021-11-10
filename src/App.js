@@ -28,7 +28,7 @@ const App = () => {
   }, []);
 
   return isLoading ? (
-    <span>En cours de chargement..."</span>
+    <span>En cours de chargement...</span>
   ) : (
     <div className="App">
       <Header
