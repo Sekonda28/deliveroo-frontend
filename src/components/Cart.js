@@ -35,7 +35,7 @@ const Cart = ({ panier, setPanier, total, setTotal }) => {
             <div className="results">
               <div className="result-line">
                 <span className="result-name">Sous-total</span>
-                <span className="result-amount">{total} €</span>
+                <span className="result-amount">{total.toFixed(2)} €</span>
               </div>
               <div className="result-line">
                 <span className="result-name">Frais de livraison</span>
@@ -44,7 +44,7 @@ const Cart = ({ panier, setPanier, total, setTotal }) => {
             </div>
             <div className="result-total">
               <span className="result-name">Total</span>
-              <span className="result-amount">{total + 2.50} €</span>
+              <span className="result-amount">{(total + 2.50).toFixed(2)} €</span>
             </div>
           </div>
         )}

@@ -43,7 +43,7 @@ const BasketItems = ({
           </span>
         </div>
         <span className="cart-item-name">{title}</span>
-        <span className="cart-amount">{price} €</span>
+        <span className="cart-amount">{price.toFixed(2)} €</span>
       </div>
     </div>
   );

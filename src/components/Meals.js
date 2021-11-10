@@ -10,7 +10,7 @@ const Meals = (props) => {
 
         const checkId = (obj) => obj.id === props.id;
         const price = parseFloat(props.price)
-        console.log(typeof(price))
+    
         if (newPanier.some(checkId) === false) {
   
           newPanier.push({

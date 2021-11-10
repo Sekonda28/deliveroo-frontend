@@ -281,7 +281,8 @@ button {
 }
 
 .cart-item-name {
-    flex: 1 1
+    flex: 1 1;
+    padding-right: 10px
 }
 
 .counter-button{
@@ -289,12 +290,13 @@ button {
     text-align: center;
 }
 .counter-button .fa-plus, .counter-button .fa-minus {
-    width: 20px;
-    height: 20px;
+
     color: rgb(0, 206, 189);
     cursor: pointer;
     border-radius: 50%;
-    border: solid 1px rgb(0, 206, 189);
+    border: solid 1px  rgb(0, 206, 189);
+    padding: 3px
+
 }
 
 /* Results */
