@@ -6,7 +6,7 @@ const Cart = ({ panier, setPanier, total, setTotal }) => {
       <div className="cart-card">
         <button
           onClick={() => {
-            console.log(panier);
+            alert("Desolé, la fonctionnalité de paiement n'est pas encore fait !");
           }}
           className={panier.length === 0 ? "cart-disabled" : "cart-inherit"}
         >
