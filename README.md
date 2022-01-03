@@ -1,6 +1,24 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+<h1 align="center"><project-name>Deliveroo replica</h1>
+
+<p align="center"><project-description>This page replicates part of the Deliveroo website using React where you can scroll through different items and add them to or remove them from your shopping basket.  This page gets its data from an API which returns a JSON file with the available items. </p>
+
+## Links
+
+- [Repo - front](https://github.com/Sekonda28/deliveroo-frontend "Repo")
+
+- [Repo - back](https://github.com/Sekonda28/deliveroo-backend "Repo")
+
+- [Live](https://deliveroo-replica-mc.netlify.app/ "Live View")
+
+- [API](<https://deliveroo-backend-matt.herokuapp.com/> "API")
+
+## Screenshots
+
+![Home Page](./src/assets/deliveroo-screenshot.png "Home Page")
+
+
+## Available Commands
 
 In the project directory, you can run:
 
@@ -37,32 +55,30 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+## Built With
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- React
+- Node
+- Yarn
+- HTML
+- CSS
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Future Updates
 
-### Code Splitting
+- Integrate Stripe payments screen
+- Add responsive layout
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+## Author
 
-### Analyzing the Bundle Size
+**Matt Caswell**
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+- [Profile](https://github.com/Sekonda28 "Matt Caswell")
+- [Email](mailto:matt.caswell@hotmail.com?subject=Hi "Hi!")
+- [Website](https://sekonda28.github.io/MattCaswell-Portfolio "Welcome")
 
-### Making a Progressive Web App
+## 🤝 Support
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+Contributions, issues, and feature requests are welcome!
 
-### Advanced Configuration
+Give a ⭐️ if you like this project!
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
